@@ -81,11 +81,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-completions.git ~/.oh-my-zsh/custom/plugins/zsh-completions
 git clone https://github.com/petervanderdoes/git-flow-completion.git ~/.oh-my-zsh/custom/plugins/git-flow-completion
-git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
+
 
 echo "配置 zsh 主题和插件..."
 # 添加 powerlevel10k 主题到 ~/.zshrc（若未配置）
-powerlevel10k/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 
 # 添加插件列表到 ~/.zshrc（若未配置）
 
