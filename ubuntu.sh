@@ -85,13 +85,9 @@ git clone --depth=1 https://gitee.com/romkatv/powerlevel10k.git ~/powerlevel10k
 
 echo "配置 zsh 主题和插件..."
 # 添加 powerlevel10k 主题到 ~/.zshrc（若未配置）
-if ! grep -q "powerlevel10k.zsh-theme" ~/.zshrc; then
-    echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >> ~/.zshrc
-fi
+powerlevel10k/powerlevel10k
 
 # 添加插件列表到 ~/.zshrc（若未配置）
-if ! grep -q "plugins=(" ~/.zshrc; then
-cat << 'EOF' >> ~/.zshrc
 
 plugins=(
   git
@@ -101,8 +97,6 @@ plugins=(
   git-flow-completion
   autoupdate
 )
-EOF
-fi
 
 ##############################
 # 安装 gtest、glog、gbench
